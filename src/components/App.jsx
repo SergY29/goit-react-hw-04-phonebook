@@ -31,8 +31,7 @@ export class App extends Component {
     }
   }
 
-  addContact = newPhoneNumber => {
-    const { name, number } = newPhoneNumber;
+  addContact = (name, number) => {
     const { contacts } = this.state;
     const newContact = {
       id: nanoid(),
