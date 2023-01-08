@@ -19,7 +19,9 @@ export const App = () => {
   );
 
   useEffect(() => {
-    localStorage.setItem(TEL, JSON.stringify(contacts));
+    if (contacts !== data) {
+      localStorage.setItem(TEL, JSON.stringify(contacts));
+    }
   }, [contacts]);
 
   const addContact = (name, number) => {
